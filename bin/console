@@ -3,9 +3,12 @@
 
 require "bundler/setup"
 require "komoru"
+require "dotenv/load"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
 
+client = Komoru::Client.new(secret_key: ENV['KOMOJU_SECRET_KEY'])
+
 require "irb"
-IRB.start(__FILE__)
+binding.irb

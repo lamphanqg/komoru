@@ -3,6 +3,6 @@
 require_relative "komoru/version"
 
 module Komoru
-  class Error < StandardError; end
-  # Your code goes here...
+  autoload :Client, "komoru/client"
+  autoload :Error, "komoru/error"
 end
