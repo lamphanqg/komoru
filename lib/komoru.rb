@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "komoru/version"
+require "komoru/version"
+require "komoru/client"
+require "komoru/error"
+require "komoru/resources"
+require "komoru/object"
+require "komoru/objects"
 
-module Komoru
-  autoload :Client, "komoru/client"
-  autoload :Error, "komoru/error"
-end
+module Komoru; end

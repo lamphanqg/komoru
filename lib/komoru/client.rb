@@ -21,5 +21,9 @@ module Komoru
         conn.adapter adapter
       end
     end
+
+    def customers
+      Komoru::CustomersResource.new(self)
+    end
   end
 end
