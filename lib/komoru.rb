@@ -6,5 +6,6 @@ require "komoru/error"
 require "komoru/resources"
 require "komoru/object"
 require "komoru/objects"
+require "komoru/list_object"
 
 module Komoru; end
