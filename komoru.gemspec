@@ -8,10 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["PHAN QUANG LAM"]
   spec.email = ["lam.phan.qg@gmail.com"]
 
-  spec.summary = "Ruby client for KOMOJU API"
-  spec.description = "KOMOJU is your gateway to the world of global, " \
-                     "cross-border payments and customers all around the world."
-  spec.homepage = "https://en.komoju.com/"
+  spec.summary = "Ruby bindings for the KOMOJU API"
+  spec.homepage = "https://github.com/lamphanqg/komoru"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
