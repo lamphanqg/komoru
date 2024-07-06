@@ -10,29 +10,7 @@ RSpec.describe Komoru::CustomersResource do
       ).to_return(
         status: 200,
         headers: {"content-type" => "application/json; charset=utf-8"},
-        body: {
-          "resource" => "list",
-          "total" => 1,
-          "page" => 1,
-          "per_page" => 10,
-          "last_page" => 1,
-          "data" => [
-            {
-              "id" => "54oy1car81mgztytc59ha8bgb",
-              "resource" => "customer",
-              "email" => "test@example.com",
-              "source" => {
-                "type" => "credit_card",
-                "brand" => "visa",
-                "last_four_digits" => "1111",
-                "month" => 5,
-                "year" => 2028
-              },
-              "metadata" => {},
-              "created_at" => "2024-06-22T07:17:50Z"
-            }
-          ]
-        }.to_json
+        body: load_fixture("customers/list")
       )
       list = customers_resource.list
       expect(stubbed_request).to have_been_requested
@@ -50,20 +28,7 @@ RSpec.describe Komoru::CustomersResource do
       ).to_return(
         status: 200,
         headers: {"content-type" => "application/json; charset=utf-8"},
-        body: {
-          id: "54oy1car81mgztytc59ha8bgb",
-          resource: "customer",
-          email: "test@example.com",
-          source: {
-            type: "credit_card",
-            brand: "visa",
-            last_four_digits: "1111",
-            month: 5,
-            year: 2028
-          },
-          metadata: {},
-          created_at: "2024-06-22T07:17:50Z"
-        }.to_json
+        body: load_fixture("customers/retrieve")
       )
       customer = customers_resource.retrieve("54oy1car81mgztytc59ha8bgb")
       expect(stubbed_request).to have_been_requested
